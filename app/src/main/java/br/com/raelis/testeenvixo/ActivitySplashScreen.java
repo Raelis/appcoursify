@@ -44,13 +44,18 @@ public class ActivitySplashScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // Inicializa o singleton
+        // Estava dando muitos bugs para mandar objetos para outras activities, por isso tive que
+        // usar.
         new AppData();
+
         setContentView(R.layout.splash_screen);
 
         /*
          * Exibindo splash.
          */
         AsyncTask.execute(() -> {
+            // Carrega os dados da HomePage via REST API
             ArrayList<CoursifyCategory> categories = readCategories();
             for(CoursifyCategory cat : categories) {
                 List<CoursifyPost> posts = readCategoryPosts(cat.getId(), 5);
@@ -68,6 +73,8 @@ public class ActivitySplashScreen extends AppCompatActivity {
 
             Intent i = new Intent(ActivitySplashScreen.this,
                     ActivityHomePage.class);
+            // Objeto categories muito grande para ser mandado via putExtra.
+            // Estava dando muitos bugs, por isso criei um singleton temporariamente
             AppData.categories = categories;
             startActivity(i);
 
@@ -77,7 +84,7 @@ public class ActivitySplashScreen extends AppCompatActivity {
 
     }
 
-
+    //Lê medias
     public HashMap<Integer, CoursifyMedia> readMedia(int[] IDs) {
         try {
             String stringIDs = "";
@@ -120,7 +127,7 @@ public class ActivitySplashScreen extends AppCompatActivity {
         return new HashMap<>();
     }
 
-
+    //Lê posts dado ID de categoria e número máximo de posts para recuperar
     public ArrayList<CoursifyPost> readCategoryPosts(int categoryID, int maxPostsToRetrieve) {
         try {
             // Create URL
@@ -152,6 +159,7 @@ public class ActivitySplashScreen extends AppCompatActivity {
         return new ArrayList<>();
     }
 
+    //Lê categorias
     public ArrayList<CoursifyCategory> readCategories() {
         try {
             // Create URL

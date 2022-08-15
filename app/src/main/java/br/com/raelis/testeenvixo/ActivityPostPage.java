@@ -2,6 +2,7 @@ package br.com.raelis.testeenvixo;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Html;
 import android.util.DisplayMetrics;
@@ -24,27 +25,32 @@ public class ActivityPostPage extends AppCompatActivity {
 
     String ShowOrHideWebViewInitialUse = "show";
     private WebView webview ;
-    //private ProgressBar spinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // Recupera dados do singleton
         CoursifyPost post = AppData.post;
 
+        // Infla o layout
         View inflater = getLayoutInflater().inflate(R.layout.post_page, null, true);
 
+        // Add o destino do botão no footer
+        Button footerButton = inflater.findViewById(R.id.button);
+        footerButton.setOnClickListener(view -> {
+            Uri uri = Uri.parse("https://coursify.me");
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
+        });
+
+        // Add o título no post
         AppCompatTextView textViewTitle = inflater.findViewById(R.id.textView6);
         textViewTitle.setText(post.getTitleRendered());
 
-        //AppCompatTextView textViewDescription = inflater.findViewById(R.id.textView7);
-        //textViewDescription.setText(Html.fromHtml(post.getContentRendered()));
-
+        // Add a webview para o conteúdo do post
         webview = inflater.findViewById(R.id.webView2);
-        //spinner = (ProgressBar)findViewById(R.id.progressBar1);
         webview.setWebViewClient(new CustomWebViewClient());
-
-        //webview.getSettings().setJavaScriptEnabled(true);
         webview.getSettings().setDefaultFontSize(32);
         webview.getSettings().setDomStorageEnabled(true);
         webview.getSettings().setLoadWithOverviewMode(true);
@@ -55,23 +61,18 @@ public class ActivityPostPage extends AppCompatActivity {
         webview.getSettings().setGeolocationEnabled(false);
         webview.getSettings().setNeedInitialFocus(false);
         webview.getSettings().setSaveFormData(false);
-
         webview.setOverScrollMode(WebView.OVER_SCROLL_NEVER);
         webview.loadData(fixHtml(post.getContentRendered()), "text/html; charset=UTF-8", null);
 
-        //Log.d("source",post.getContentRendered());
-
+        // Seta o layout
         setContentView(inflater);
     }
 
-    // This allows for a splash screen
-    // (and hide elements once the page loads)
     private class CustomWebViewClient extends WebViewClient {
 
         @Override
         public void onPageStarted(WebView webview, String url, Bitmap favicon) {
-
-            // only make it invisible the FIRST time the app is run
+            // apenas deixa invisível na PRIMEIRA vez que o aplicativo é executado
             if (ShowOrHideWebViewInitialUse.equals("show")) {
                 webview.setVisibility(webview.INVISIBLE);
             }
@@ -79,16 +80,13 @@ public class ActivityPostPage extends AppCompatActivity {
 
         @Override
         public void onPageFinished(WebView view, String url) {
-
             ShowOrHideWebViewInitialUse = "hide";
-            //spinner.setVisibility(View.GONE);
-
             view.setVisibility(webview.VISIBLE);
             super.onPageFinished(view, url);
-
         }
     }
 
+    // Método que retira "&" do código HTML
     public String fixHtml(String html) {
         DisplayMetrics displayMetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
