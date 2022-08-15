@@ -93,8 +93,8 @@ public class ActivityPostPage extends AppCompatActivity {
         int width = displayMetrics.widthPixels;
         html = html.replace("<p>&nbsp;</p>","");
         html = html.replace("&","");
-        System.out.println(width);
-        System.out.println(html);
+        //System.out.println(width);
+        //System.out.println(html);
         return html;
     }
 

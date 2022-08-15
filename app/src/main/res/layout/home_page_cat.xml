@@ -15,12 +15,15 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/appCompatTextView2"
-            android:layout_width="wrap_content"
+            android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginTop="46dp"
-            android:text="CATEGORIA"
+            android:maxLines="1"
+            android:text="CATEGORIA asdf asdf sadf asdfa sdf asdf asdf asdfas fsd f"
             android:textAppearance="@style/TextStyle1"
+            app:layout_constraintEnd_toStartOf="@+id/appCompatTextView"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
