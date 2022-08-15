@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
@@ -26,6 +25,7 @@
             android:layout_height="81dp"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
+            app:errorTextAppearance="@style/Theme.AppCompat"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -36,7 +36,7 @@
             android:id="@+id/textView4"
             android:layout_width="217dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="9dp"
+            android:layout_marginStart="9dp"
             android:layout_marginTop="5dp"
             android:maxLines="3"
             android:text="TITULO DO POST ASDF ASDF ASDF ASDF ASDF ASFD ASDF ASFD ASFD ASDF ASDF ASDF SFADF ASDSDF AADF SFAD FS ADF"

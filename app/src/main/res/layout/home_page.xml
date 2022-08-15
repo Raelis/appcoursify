@@ -15,6 +15,7 @@
         android:layout_above="@+id/footer"
         android:layout_below="@+id/toolbar"
         android:background="#ffffff"
+        android:contentDescription="@string/nestedViewSpeakableText"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <androidx.appcompat.widget.LinearLayoutCompat
