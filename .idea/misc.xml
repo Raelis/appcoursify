@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Workspace/android/TesteEnvixo/app/src/main/res/drawable/color_gradient.xml" value="0.196" />
+        <entry key="..\:/Workspace/android/TesteEnvixo/app/src/main/res/drawable/divider.xml" value="0.196" />
+        <entry key="..\:/Workspace/android/TesteEnvixo/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.1975" />
+        <entry key="..\:/Workspace/android/TesteEnvixo/app/src/main/res/drawable/ic_baseline_menu_48.xml" value="0.1975" />
+        <entry key="..\:/Workspace/android/TesteEnvixo/app/src/main/res/drawable/ic_download_icon_hamburger_list_menu_navigation_stack_icon_1320196714059164103_0.xml" value="0.1975" />
+        <entry key="..\:/Workspace/android/TesteEnvixo/app/src/main/res/drawable/ic_round_brightness_1_24.xml" value="0.1975" />
+        <entry key="..\:/Workspace/android/TesteEnvixo/app/src/main/res/drawable/image_shape.xml" value="0.1975" />
+        <entry key="..\:/Workspace/android/TesteEnvixo/app/src/main/res/font/roboto.xml" value="0.21875" />
+        <entry key="..\:/Workspace/android/TesteEnvixo/app/src/main/res/layout/footer.xml" value="0.18802083333333333" />
+        <entry key="..\:/Workspace/android/TesteEnvixo/app/src/main/res/layout/home_page.xml" value="0.3595617529880478" />
+        <entry key="..\:/Workspace/android/TesteEnvixo/app/src/main/res/layout/home_page_cat.xml" value="0.28173374613003094" />
+        <entry key="..\:/Workspace/android/TesteEnvixo/app/src/main/res/layout/home_page_cat_post.xml" value="0.31809145129224653" />
+        <entry key="..\:/Workspace/android/TesteEnvixo/app/src/main/res/layout/menu_main.xml" value="0.18958333333333333" />
+        <entry key="..\:/Workspace/android/TesteEnvixo/app/src/main/res/layout/post_page.xml" value="0.5" />
+        <entry key="..\:/Workspace/android/TesteEnvixo/app/src/main/res/layout/splash_screen.xml" value="0.18489583333333334" />
+        <entry key="..\:/Workspace/android/TesteEnvixo/app/src/main/res/layout/toolbar.xml" value="0.75" />
+        <entry key="..\:/Workspace/android/TesteEnvixo/app/src/main/res/menu/home_page_menu.xml" value="0.18958333333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

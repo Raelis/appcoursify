@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextStyle1" parent="@android:style/TextAppearance">
+        <item name="android:textSize">22dp</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textColor">#2ab598</item>
+        <item name="android:spacing">0dp</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:opacity">opaque</item>
+        <item name="lineSpacing">27pt</item>
+    </style>
+    <style name="TextStyle2" parent="@android:style/TextAppearance">
+        <item name="android:textSize">17dp</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textColor">#535353</item>
+        <item name="android:spacing">0dp</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:opacity">opaque</item>
+        <item name="lineSpacing">20pt</item>
+    </style>
+    <style name="TextStyle3" parent="@android:style/TextAppearance">
+        <item name="android:textSize">17dp</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textColor">#2ab598</item>
+        <item name="android:spacing">0dp</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:opacity">opaque</item>
+        <item name="lineSpacing">24pt</item>
+    </style>
+    <style name="TextStyle4" parent="@android:style/TextAppearance">
+        <item name="android:textSize">15dp</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textColor">#868686</item>
+        <item name="android:spacing">0dp</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:opacity">opaque</item>
+        <item name="lineSpacing">20pt</item>
+    </style>
+    <style name="TextStyle5" parent="@android:style/TextAppearance">
+        <item name="android:textSize">16dp</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textColor">#fda506</item>
+        <item name="android:spacing">0dp</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:opacity">opaque</item>
+        <item name="lineSpacing">20pt</item>
+    </style>
+    <style name="TextStyle6" parent="@android:style/TextAppearance">
+        <item name="android:textSize">12dp</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:spacing">0dp</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:opacity">opaque</item>
+        <item name="lineSpacing">17pt</item>
+    </style>
+    <style name="MyCardView" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MaterialCardView.Cut</item>
+    </style>
+    <style name="ShapeAppearanceOverlay.MaterialCardView.Cut" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">12dp</item>
+        <item name="cornerSizeTopLeft">12dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+    <style name="ShapeAppearanceOverlay.MaterialCardView.Cut.Full" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">12dp</item>
+        <item name="cornerSizeTopLeft">12dp</item>
+        <item name="cornerSizeBottomRight">12dp</item>
+        <item name="cornerSizeBottomLeft">12dp</item>
+    </style>
+    <style name="MyButton" parent="@style/Widget.MaterialComponents.Button">
+        <item name="shapeAppearanceOverlay">@style/Button.Cut</item>
+    </style>
+    <style name="Button.Cut" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">60dp</item>
+    </style>
+</resources>
